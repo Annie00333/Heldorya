@@ -3,129 +3,133 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>HELDORYA – Fantasy Modded Minecraft Server</title>
+<title>HELDORYA Minecraft Server - Welcome to the Adventure</title>
 <style>
+/* Reset & base */
+* {
+box-sizing: border-box;
+}
 body {
 margin: 0;
 font-family: 'Georgia', serif;
-background: #1a0f0f;
-color: #f4f1ed;
+background: linear-gradient(135deg, #5a0e00, #a33400);
+color: #f0e6d2;
+line-height: 1.6;
+}
+a {
+color: #ffcc66;
+text-decoration: none;
+}
+a:hover {
+text-decoration: underline;
 }
 
+/* Container */
+.container {
+max-width: 1100px;
+margin: auto;
+padding: 20px;
+}
+
+/* Header */
 header {
-background: linear-gradient(to right, #8b0000, #ff4500);
-padding: 2rem;
 text-align: center;
-color: #fff8e7;
+padding: 30px 0 20px 0;
+border-bottom: 3px solid #ff6f00;
 }
-
 header h1 {
 font-size: 3rem;
-margin: 0;
-letter-spacing: 2px;
-text-shadow: 2px 2px #000;
+letter-spacing: 3px;
+text-shadow: 2px 2px 4px #330a00;
+margin-bottom: 0;
 }
-
 header p {
 font-style: italic;
-color: #f0e1c6;
+font-size: 1.25rem;
+margin-top: 5px;
+color: #ffcc66;
+text-shadow: 1px 1px 2px #4d1900;
 }
 
+/* Sections style */
 section {
-max-width: 960px;
-margin: auto;
-padding: 2rem 1rem;
-border-bottom: 1px solid #444;
+margin-top: 40px;
+background: rgba(30, 10, 0, 0.5);
+border-radius: 12px;
+padding: 25px 30px;
+box-shadow: 0 0 15px #aa4a00aa;
 }
-
-h2 {
-color: #ffae42;
+section h2 {
+border-bottom: 2px solid #ff8c00;
+padding-bottom: 10px;
 font-size: 2rem;
-margin-bottom: 1rem;
-border-left: 5px solid #c0392b;
-padding-left: 10px;
+margin-bottom: 20px;
 }
 
-.img-banner {
-width: 100%;
-border-radius: 10px;
-margin: 1rem 0;
-box-shadow: 0 0 10px #000;
+/* Rules list */
+ul.rules {
+list-style-type: none;
+padding-left: 0;
 }
-
-.info-box {
-background: #2b1616;
-padding: 1rem;
-border-left: 4px solid #e25822;
-margin-bottom: 1rem;
-border-radius: 6px;
+ul.rules li {
+margin-bottom: 12px;
+padding-left: 24px;
+position: relative;
 }
-
-.rules {
-background: #311b0b;
-padding: 1rem;
-border-radius: 6px;
-margin-top: 1rem;
-}
-
-.world-gallery {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-gap: 1.5rem;
-}
-
-.world-card {
-background: #2e1b13;
-border-radius: 8px;
-overflow: hidden;
-box-shadow: 0 0 6px #000;
-}
-
-.world-card img {
-width: 100%;
-height: 180px;
-object-fit: cover;
-}
-
-.world-card h3 {
-margin: 0;
-padding: 1rem;
-background: #3e221b;
-font-size: 1.1rem;
-color: #ffc96b;
-}
-
-.cta {
-text-align: center;
-margin: 2rem 0;
-background: #350d0d;
-padding: 2rem;
-border-radius: 10px;
-}
-
-.cta p {
+ul.rules li::before {
+content: "⚔️";
+position: absolute;
+left: 0;
+top: 0;
 font-size: 1.2rem;
 }
 
-.cta strong {
-color: #ffae42;
+/* Explore the World Grid */
+.explore-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+gap: 20px;
 }
-
-footer {
-background: #0f0505;
+.explore-item {
+background: #7a2a00cc;
+border-radius: 10px;
+overflow: hidden;
+box-shadow: 0 0 10px #ff8c00cc;
+transition: transform 0.3s ease;
+}
+.explore-item:hover {
+transform: scale(1.05);
+}
+.explore-item img {
+width: 100%;
+height: 170px;
+object-fit: cover;
+}
+.explore-text {
+padding: 15px 20px;
+font-weight: bold;
+font-size: 1.1rem;
+color: #fff2cc;
 text-align: center;
-color: #999;
+background: #4c1600cc;
+}
+
+/* Footer */
+footer {
+text-align: center;
+margin: 40px 0 20px 0;
 font-size: 0.9rem;
-padding: 1rem;
+color: #ffbb66;
 }
 
-a {
-color: #ffa07a;
-text-decoration: none;
+/* Responsive text size */
+@media(max-width: 600px) {
+header h1 {
+font-size: 2.25rem;
 }
-
-a:hover {
-text-decoration: underline;
+section h2 {
+font-size: 1.6rem;
+}
 }
 </style>
 </head>
@@ -133,93 +137,84 @@ text-decoration: underline;
 
 <header>
 <h1>HELDORYA</h1>
-<p>The Ultimate Modded Fantasy Minecraft Adventure</p>
+<p>The Ultimate Modded Minecraft Experience</p>
 </header>
 
-<section>
-<h2>Welcome to Heldorya</h2>
-<p>Enter a realm forged by fire, ruled by ancient magic and reborn through powerful builds. Heldorya is a unique, Forge 1.20.1 modded Minecraft server, rich with exploration, custom structures, and secrets waiting to be uncovered.</p>
-<img src="https://i.imgur.com/VWCIt5y.jpeg" alt="Castle of Valdareth" class="img-banner">
+<div class="container">
+
+<section id="welcome">
+<h2>Welcome to Heldorya!</h2>
+<p>Step into a vast modded world where epic adventures, breathtaking builds, and challenging quests await you. Our server is built on Forge 1.20.1 and filled with unique mods, bringing new biomes, mobs, tools, and magic right to your fingertips. Whether you're a seasoned builder, an explorer, or a warrior, Heldorya offers an immersive medieval fantasy realm to conquer and shape.</p>
+<p><strong>Server IP:</strong> <a href="minecraft://moddedw0rld.bh-games.com">moddedw0rld.bh-games.com</a></p>
 </section>
 
-<section>
-<h2>Words from the Royal Scribe</h2>
-<div class="info-box">
-<p><strong>Before your journey begins, brave one:</strong></p>
-<ul>
-<li>You must have a PC with <strong>at least 6.5GB RAM allocated</strong> to Minecraft.</li>
-<li>You need to install the modpack using <strong>CurseForge</strong>.</li>
-<li>The <strong>modpack is private</strong> – message the server team to receive it before joining.</li>
-<li>The <strong>server language is English</strong>. Please speak your native language only in private.</li>
-<li>Support the kingdom! <strong>Donations</strong> help us maintain and grow the world of Heldorya.</li>
-</ul>
-</div>
-<img src="https://i.imgur.com/U8T7L9r.jpeg" alt="Yulia character skin" class="img-banner">
-</section>
-
-<section>
+<section id="laws">
 <h2>Laws of the Land</h2>
-<div class="rules">
-<h3>(ENG) REQUIREMENTS AND MISCELLANEOUS</h3>
-<ul>
-<li>● have a computer where it is possible to allocate at least 6.5GB of RAM.</li>
-<li>● have CurseForge.</li>
-<li>● server IP: moddedw0rld.bh-games.com</li>
-<li>● there are Easter Eggs in the world</li>
-<li>● main language is English – use your own language in private only</li>
-<li>● want to help? support the server with a donation!</li>
+<ul class="rules">
+<li>Respect all players and admins. No toxic behavior or harassment.</li>
+<li>Cheating, hacking, or exploiting bugs is strictly forbidden.</li>
+<li>Build with care: do not grief or destroy others' creations.</li>
+<li>Use English in global chats to keep communication clear.</li>
+<li>Follow the admin’s instructions at all times.</li>
+<li>Keep all discussions and content server-appropriate.</li>
 </ul>
-<br>
-<h3>(ITA) REQUISITI E INFO VARIE</h3>
-<ul>
-<li>● avere un computer con almeno 6,5 GB di RAM allocati a Minecraft</li>
-<li>● avere CurseForge</li>
-<li>● IP del server: moddedw0rld.bh-games.com</li>
-<li>● ci sono Easter Egg nel mondo</li>
-<li>● la lingua principale è l'inglese. Se parli un'altra lingua, fallo in privato</li>
-<li>● vuoi aiutarci? Fai una donazione!</li>
-</ul>
-</div>
 </section>
 
-<section>
+<section id="explore">
 <h2>Explore the World</h2>
-<div class="world-gallery">
-
-<div class="world-card">
-<img src="https://i.imgur.com/VWCIt5y.jpeg" alt="Castle of Valdareth">
-<h3>Explore the Castle of Valdareth – hidden chests await!</h3>
+<div class="explore-grid">
+<div class="explore-item">
+<img src="https://i.imgur.com/4PhG4DP.jpg" alt="Medieval Spawn Hub" />
+<div class="explore-text">Build Your Own Medieval House or Castle</div>
 </div>
-
-<div class="world-card">
-<img src="https://i.imgur.com/k41Y8EN.jpeg" alt="Enchanted Maze">
-<h3>Escape the enchanted maze... or be lost forever!</h3>
+<div class="explore-item">
+<img src="https://i.imgur.com/nXkMk3r.jpg" alt="Biomes O’ Plenty" />
+<div class="explore-text">Discover New Lands with Biomes O’ Plenty</div>
 </div>
-
-<div class="world-card">
-<img src="https://i.imgur.com/qXTyxXk.jpeg" alt="Bridge houses">
-<h3>Buy or rent a home on the castle bridge!</h3>
+<div class="explore-item">
+<img src="https://i.imgur.com/BsZ0XKn.jpg" alt="Magical Mobs" />
+<div class="explore-text">Face Unique Mobs & Magical Creatures</div>
 </div>
-
-<div class="world-card">
-<img src="https://i.imgur.com/GOtCjkI.jpeg" alt="Castle Gardens">
-<h3>Rest in the magical gardens of the highborn</h3>
+<div class="explore-item">
+<img src="https://i.imgur.com/W5p1DBZ.jpg" alt="Epic Labyrinth" />
+<div class="explore-text">Challenge Yourself in Our Epic Labyrinth</div>
 </div>
-
+<div class="explore-item">
+<img src="https://i.imgur.com/gFDyk6T.jpg" alt="Mystic Dragons" />
+<div class="explore-text">Ride and Tame Powerful Dragons</div>
+</div>
+<div class="explore-item">
+<img src="https://i.imgur.com/a3efQ9u.jpg" alt="Forge & Craft" />
+<div class="explore-text">Master New Crafts with Custom Mods</div>
+</div>
 </div>
 </section>
 
-<section class="cta">
-<h2>How to Join</h2>
-<p>The IP is: <strong>moddedw0rld.bh-games.com</strong></p>
-<p><strong>⚠️ You must contact us to receive the modpack before joining!</strong></p>
-<p>Write to us on Instagram: <a href="https://instagram.com/Heldorya_" target="_blank">@Heldorya_</a>
-<br>or by email: <a href="mailto:netherlithannie@gmail.com">netherlithannie@gmail.com</a></p>
+<section id="promotions">
+<h2>Featured Builds & Adventures</h2>
+<p>From the towering <strong>Valdareth Castle</strong> to enchanting villages and mysterious dungeons, Heldorya’s world is crafted with care and creativity. Join our community and discover endless opportunities for exploration and building mastery.</p>
+<ul>
+<li><strong>Valdareth Castle:</strong> Our main fortress and home base, with rich medieval architecture and hidden secrets.</li>
+<li><strong>The Labyrinth:</strong> A complex maze filled with traps and treasures for the brave.</li>
+<li><strong>Bridge Towns:</strong> Charming settlements built over grand bridges connecting different biomes.</li>
+<li><strong>Dragon Peaks:</strong> Mountain ranges where legendary dragons soar.</li>
+</ul>
 </section>
+
+<section id="info">
+<h2>Server Information</h2>
+<p>Our modpack is carefully curated to offer a balanced experience, enhancing vanilla gameplay with mods that add depth without overwhelming. To join, please contact an admin to receive the modpack and access instructions.</p>
+<p><strong>Forge version:</strong> 1.20.1</p>
+<p><strong>Contact us via Discord or Email for access:</strong> <a href="mailto:admin@heldorya.com">admin@heldorya.com</a></p>
+</section>
+
+</div>
 
 <footer>
-&copy; 2025 HELDORYA – Built by Yulia & Ale. All rights reserved.
+<p>© 2025 HELDORYA Minecraft Server | Crafted with passion by Ale & Yulia</p>
 </footer>
 
 </body>
 </html>
+
+
